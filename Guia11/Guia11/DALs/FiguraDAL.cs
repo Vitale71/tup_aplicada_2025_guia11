@@ -3,19 +3,44 @@ using GeometriaModels.Models;
 
 namespace GeometriaModels.DALs;
 
-public class FiguraDAL
+public class FiguraDAL : IFiguraDAL
 {
     List<FiguraModel> Figuras = new();
-    
-    public FiguraModel GetById(int id)
+    int Id = 1;
+
+    public FiguraModel Add(FiguraModel figura)
     {
-        return Figuras.Where(p => p.Id = id).FirstOrDefault();
+        if (figura.Id > 0) return null;
+
+        figura.Id = Id++;
+        Figuras.Add(figura);
+        return figura;
     }
 
-
-    public FiguraModel Save(FiguraModel entity)
+    public List<FiguraModel> GetALL()
     {
-        var F = GetById(entity.Id);
+        return Figuras;
+    }
+
+    public FiguraModel GetById(int id)
+    {
+        /*return (from f in figuras
+                 where f.Id == id
+                 select f).FirstOrDefault();*/
+        return Figuras.Where(p => p.Id == id).FirstOrDefault();
+    }
+
+    public bool Remove(int id)
+    {
+        throw new NotImplementedException();
+    }
+
+    public FiguraModel? Save(FiguraModel entity) //tambien se llama update
+    {
+        entity.Id = GenId();
+        Figuras.Add(entity);
+        return entity;
+        /*var F = GetById(entity.Id);
         if (F == null) { return null; }
         if (F.GetType() != entity.GetType()) { return null; }
         if (entity is RectanguloModel r)
@@ -24,7 +49,13 @@ public class FiguraDAL
             fr.Area = r.Area;
             fr.Ancho = r.Ancho;
             fr.Largo = r.Largo;
-        }
+        }*/
+
+    }
+
+    protected int? GenId()
+    {
+        return (from f in Figuras select f.Id).DefaultIfEmpty(0).Max() + 1;
     }
 }
 
