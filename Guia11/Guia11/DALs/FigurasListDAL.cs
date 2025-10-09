@@ -3,7 +3,7 @@ using GeometriaModels.Models;
 
 namespace GeometriaModels.DALs;
 
-public class FiguraDAL : IFiguraDAL
+public class FigurasListDAL : IFigurasDAL
 {
     List<FiguraModel> Figuras = new();
     int Id = 1;
@@ -12,7 +12,7 @@ public class FiguraDAL : IFiguraDAL
     {
         if (figura.Id > 0) return null;
 
-        figura.Id = Id++;
+        figura.Id = GenId();
         Figuras.Add(figura);
         return figura;
     }
@@ -22,7 +22,7 @@ public class FiguraDAL : IFiguraDAL
         return Figuras;
     }
 
-    public FiguraModel GetById(int id)
+    public FiguraModel? GetById(int id)
     {
         /*return (from f in figuras
                  where f.Id == id
@@ -30,9 +30,13 @@ public class FiguraDAL : IFiguraDAL
         return Figuras.Where(p => p.Id == id).FirstOrDefault();
     }
 
-    public bool Remove(int id)
+    public void Remove(int id)
     {
-        throw new NotImplementedException();
+        var figura = GetById(id);
+        if (figura != null)
+        {
+            Figuras.Remove(figura);
+        }
     }
 
     public FiguraModel? Save(FiguraModel entity) //tambien se llama update

@@ -7,12 +7,12 @@ using System.Threading.Tasks;
 
 namespace GeometriaModels.DALs
 {
-    public interface IFiguraDAL
+    public interface IFigurasDAL
     {
         public List<FiguraModel> GetALL();
         public FiguraModel GetById(int id);
         public FiguraModel Add(FiguraModel figura);
-        public bool Remove(int id);
+        public void Remove(int id);
         public FiguraModel Save(FiguraModel entity); //tambien se llama Update
     }
 }
