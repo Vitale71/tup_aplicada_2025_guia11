@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GeometriaModels", "Guia11\G
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GeometriaDekstop", "GeometriaDekstop\GeometriaDekstop.csproj", "{9C9E4EF4-CB31-40E7-83BB-3642313DA260}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GeometriaWebAPI", "GeometriaWebAPI\GeometriaWebAPI.csproj", "{B244A8CD-00B2-4F47-B436-2AC5F6CC8C71}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{9C9E4EF4-CB31-40E7-83BB-3642313DA260}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9C9E4EF4-CB31-40E7-83BB-3642313DA260}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9C9E4EF4-CB31-40E7-83BB-3642313DA260}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B244A8CD-00B2-4F47-B436-2AC5F6CC8C71}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B244A8CD-00B2-4F47-B436-2AC5F6CC8C71}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B244A8CD-00B2-4F47-B436-2AC5F6CC8C71}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B244A8CD-00B2-4F47-B436-2AC5F6CC8C71}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
