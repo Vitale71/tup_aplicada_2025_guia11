@@ -32,7 +32,7 @@
             groupBox1 = new GroupBox();
             button2 = new Button();
             tbRadio = new TextBox();
-            textBox3 = new TextBox();
+            tbArea = new TextBox();
             tbAlto = new TextBox();
             tbAncho = new TextBox();
             label4 = new Label();
@@ -65,7 +65,7 @@
             // 
             groupBox1.Controls.Add(button2);
             groupBox1.Controls.Add(tbRadio);
-            groupBox1.Controls.Add(textBox3);
+            groupBox1.Controls.Add(tbArea);
             groupBox1.Controls.Add(tbAlto);
             groupBox1.Controls.Add(tbAncho);
             groupBox1.Controls.Add(label4);
@@ -98,12 +98,12 @@
             tbRadio.Size = new Size(100, 23);
             tbRadio.TabIndex = 9;
             // 
-            // textBox3
+            // tbArea
             // 
-            textBox3.Location = new Point(248, 134);
-            textBox3.Name = "textBox3";
-            textBox3.Size = new Size(100, 23);
-            textBox3.TabIndex = 8;
+            tbArea.Location = new Point(248, 134);
+            tbArea.Name = "tbArea";
+            tbArea.Size = new Size(100, 23);
+            tbArea.TabIndex = 8;
             // 
             // tbAlto
             // 
@@ -231,7 +231,7 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 450);
+            ClientSize = new Size(524, 450);
             Controls.Add(groupBox3);
             Controls.Add(groupBox1);
             Name = "Form1";
@@ -258,7 +258,7 @@
         private Button button4;
         private Button button3;
         public TextBox tbRadio;
-        public TextBox textBox3;
+        public TextBox tbArea;
         public TextBox tbAlto;
         public TextBox tbAncho;
         public RadioButton radioCirculo;

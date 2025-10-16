@@ -18,7 +18,11 @@ public partial class Form1 : Form
 
     private void button1_Click(object sender, EventArgs e)
     {
-        _figurasService.AddFigura(new RectanguloModel { Largo = 1 });
+        tbAlto.Clear();
+        tbAncho.Clear();
+        tbRadio.Clear();
+        tbArea.Clear();
+        //_figurasService.AddFigura(new RectanguloModel { Largo = 1 });
     }
 
 
